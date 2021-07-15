@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "705323152983",
+    "project_id": "kushalchatapplication",
+    "storage_bucket": "kushalchatapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705323152983:android:743fdf26692ac22452d512",
+        "android_client_info": {
+          "package_name": "com.example.chat_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705323152983-henbhnvimbl7ah9cpns5rtrfqdq6189c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq9PvYLNYLp8XJGvKaPMPVOIV0MTls6vE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705323152983-henbhnvimbl7ah9cpns5rtrfqdq6189c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
