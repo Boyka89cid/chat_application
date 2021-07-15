@@ -16,8 +16,8 @@ class AuthService
           'email':email
         }).whenComplete(() {print('user Added to cloud Firestore');});
       });
-      User user = FirebaseAuth.instance.currentUser; // assigning current user value to the user object of Class User. //print(user?.uid.toString());
-      print(user.uid.toString());
+      User? user = FirebaseAuth.instance.currentUser; // assigning current user value to the user object of Class User. //print(user?.uid.toString());
+      print(user?.uid.toString());
       return user;
     } on FirebaseAuthException catch (e)
     {
@@ -31,8 +31,8 @@ class AuthService
     try
     {
       UserCredential userCredential=await _auth.signInWithEmailAndPassword(email: email, password: password);
-      User user = FirebaseAuth.instance.currentUser;
-      print(user.uid.toString());
+      User? user = FirebaseAuth.instance.currentUser;
+      print(user?.uid.toString());
       return user;
     } on FirebaseAuthException catch (e)
     {

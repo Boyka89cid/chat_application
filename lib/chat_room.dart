@@ -57,12 +57,12 @@ class ChatRoom extends StatelessWidget
                 {
                   getXController.isSearching.value=true;
                   getXController.haveSearchedUser.value=false;
-                  getXController.getUserFromFireCloud(searchEditingController.text.toString().trim()).then((value)
+                  getXController.getUserFromFireCloud(searchEditingController.text.toString().trim()).whenComplete(()
                   {
-                      print(getXController.userDetails);
-                      seachedUserDetails=getXController.userDetails;
                       getXController.isSearching.value=false;
                       getXController.haveSearchedUser.value=true;
+                      print(getXController.userDetails);
+                      seachedUserDetails=getXController.userDetails;
                   });
                 }, icon: Icon(Icons.youtube_searched_for_rounded)),
               )
@@ -80,8 +80,12 @@ class ChatRoom extends StatelessWidget
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
+                          margin: EdgeInsets.only(left: 10.0),
                           child: Text('${getXController.userDetails.elementAt(1)}',style: TextStyle(fontSize: 15.0),)
                           ),
+                        Container(
+                          child: TextButton(onPressed:(){}, child: Text('Message'),),
+                        )
                         /*TextButton(onPressed: (){getXController.sentMsg(userID);},
                             child: Text('Message'))*/
                       ],
